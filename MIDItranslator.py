@@ -1,4 +1,3 @@
-
 def translator(RANDOMLIST):
     newList = []
     for x in RANDOMLIST:
@@ -24,12 +23,35 @@ def translator(RANDOMLIST):
         newList = newList + [newNote]
     return (newList)
 
+def letternote(list):
+    newlist = []
+    for x in list:
+        noteFinder = x % 7
+        if noteFinder == 0:
+            degree = 'C'  # c
+        elif noteFinder == 1:
+            degree = 'D'  # d
+        elif noteFinder == 2:
+            degree = 'E'  # e
+        elif noteFinder == 3:
+            degree = 'F'  # f
+        elif noteFinder == 4:
+            degree = 'G'  # g
+        elif noteFinder == 5:
+            degree = 'A'  # a
+        else:
+            degree = 'B'  # b
+        newlist = newlist + [degree]
+    print(newlist)
 
 sList = translator(s.notes)
 aList = translator(a.notes)
 tList = translator(t.notes)
 bList = translator(b.notes)
-
+letternote(s.notes)
+letternote(a.notes)
+letternote(t.notes)
+letternote(b.notes)
 
 def halfnoteaddition(inputlist):
     newList = []
